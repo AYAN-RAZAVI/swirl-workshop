@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+}
+nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.logo{
+    font-size: 1.8rem;
+    font-weight: 3250;
+    letter-spacing: 4px;
+}
+.nav-menu{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.nav-menu a::after{
+    content: ' ';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff6b6b;
+    transition: width 0.3s ease;
+}
+.nav-menu a:hover::after{
+    width: 100%;
+}
+.nav-menu a:hover{
+    color: #ff6b6b;
+}
+main{
+    margin-top: 70px;
+}
+.hero-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www..w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23333" width="1200" height="800"/><circle cx="300" cy="200" r="100" fill="%23444"/><circle cx="900" cy="600" r="80" fill="%13555"/></svg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #cccccc;
+    font-style: italic;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+.portfolio-links{
+    text-align: center;
+    padding: 3rem 0;
+    background: #222;
+}
+.external-link{
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid #ff6b6b;
+    color: #ff6b6b;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.external-link:hover{
+    background: #ff6b6b;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+.contact-section{
+    background: #111;
+    padding: 3rem 0;
+    text-align: center;
+}
+.contact-links{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+.contact-link{
+    display: flex;
+    text-align: center;
+    gap: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: 1px solid #444;
+    transition: all 0.3s ease;
+}
+.contact-link:hover{
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+    transform: scale(1.05);
+}
+.services-section{
+    padding: 4rem 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+.service-card{
+    background: #222;
+    padding: 2rem;
+    border-left: 4px solid #ff6b6b;
+    transition: transfor 0.3s ease;
+}
+.service-card:hover{
+    transform: translateX(10px);
+}
+.service-list{
+    list-style: none;
+    margin-top: 1rem;
+}
+.service-list li{
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+    position: relative;
+    padding-left: 2rem;
+}
+.service-list li::before{
+    content: '▶️';
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+}
+.bookmark-section{
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    padding: 3rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+.bookmark-sectio::before{
+    content: "📌";
+    position: absolute;
+    top: 250px;
+    right: 30px;
+    font-size: 3rem;
+    opacity: 0.4;
+}
+.bookmark-content{
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.bookmark-content h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.signature-section{
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #0a0a0a;
+    font-size: 3rem;
+    font-style: italic;
+    color: #ff6b6b;
+}
+.error-showcase{
+    background: radial-gradient(circle, #ff6b6b 0%, #1a1a1a 100%);
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.error-showcase::before{
+    content: '404';
+    position: absolute;
+    font-size: 15rem;
+    font-weight: bold;
+    opacity: 0.1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.error-content{
+    position: relative;
+    z-index: 2;
+}
+.error-content h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.cta-section{
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #1a1a1a;
+}
+.button-group{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+.cta-button{
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border: none;
+    padding: 1.5rem 3rem;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+.cta-button::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+.cta-button:hover::before{
+    left: 100%;
+}
+.cta-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255,107,107,0.3);
+}
+.secondary-button{
+    background: transparent;
+    border: 2px solid #ff6b6b;
+    color: #ff6b6b;
+}
+.secondary-button:hover{
+    background: #ff6b6b;
+    color: #1a1a1a;
+}
